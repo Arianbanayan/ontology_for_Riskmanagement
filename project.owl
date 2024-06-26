@@ -1,0 +1,978 @@
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.example.org/extended-risk-management-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="" IRI="http://www.example.org/extended-risk-management-ontology#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+
+    <!-- Declaration of Classes -->
+    <Declaration>
+        <Class IRI="#Risk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Threat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vulnerability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Impact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Control"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Incident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RiskRegister"/>
+    </Declaration>
+
+    <!-- Declaration of Subclasses -->
+    <Declaration>
+        <Class IRI="#CyberSecurityRisk"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#CyberSecurityRisk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#PhysicalThreat"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#PhysicalThreat"/>
+        <Class IRI="#Threat"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#ApplicationVulnerability"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ApplicationVulnerability"/>
+        <Class IRI="#Vulnerability"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#DatabaseAsset"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#DatabaseAsset"/>
+        <Class IRI="#Asset"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#FinancialImpact"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#FinancialImpact"/>
+        <Class IRI="#Impact"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#PreventiveControl"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#PreventiveControl"/>
+        <Class IRI="#Control"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#DataBreachIncident"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#DataBreachIncident"/>
+        <Class IRI="#Incident"/>
+    </SubClassOf>
+
+    <Declaration>
+        <Class IRI="#OperationalRisk"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#OperationalRisk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#EnvironmentalThreat"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#EnvironmentalThreat"/>
+        <Class IRI="#Threat"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#NetworkVulnerability"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#NetworkVulnerability"/>
+        <Class IRI="#Vulnerability"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#PersonnelAsset"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#PersonnelAsset"/>
+        <Class IRI="#Asset"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#ReputationImpact"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ReputationImpact"/>
+        <Class IRI="#Impact"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#DetectiveControl"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#DetectiveControl"/>
+        <Class IRI="#Control"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#SystemFailureIncident"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#SystemFailureIncident"/>
+        <Class IRI="#Incident"/>
+    </SubClassOf>
+
+    <Declaration>
+        <Class IRI="#ComplianceRisk"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ComplianceRisk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#SocialThreat"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#SocialThreat"/>
+        <Class IRI="#Threat"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#HardwareVulnerability"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#HardwareVulnerability"/>
+        <Class IRI="#Vulnerability"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#IntellectualPropertyAsset"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#IntellectualPropertyAsset"/>
+        <Class IRI="#Asset"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#LegalImpact"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#LegalImpact"/>
+        <Class IRI="#Impact"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#CorrectiveControl"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#CorrectiveControl"/>
+        <Class IRI="#Control"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#HumanErrorIncident"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#HumanErrorIncident"/>
+        <Class IRI="#Incident"/>
+    </SubClassOf>
+
+    <Declaration>
+        <Class IRI="#ProjectRisk"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ProjectRisk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#EconomicThreat"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#EconomicThreat"/>
+        <Class IRI="#Threat"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#SoftwareVulnerability"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#SoftwareVulnerability"/>
+        <Class IRI="#Vulnerability"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#HumanResourcesAsset"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#HumanResourcesAsset"/>
+        <Class IRI="#Asset"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#OperationalImpact"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#OperationalImpact"/>
+        <Class IRI="#Impact"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#AdministrativeControl"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AdministrativeControl"/>
+        <Class IRI="#Control"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#NaturalDisasterIncident"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#NaturalDisasterIncident"/>
+        <Class IRI="#Incident"/>
+    </SubClassOf>
+
+    <Declaration>
+        <Class IRI="#StrategicRisk"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#StrategicRisk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#PoliticalThreat"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#PoliticalThreat"/>
+        <Class IRI="#Threat"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#FirmwareVulnerability"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#FirmwareVulnerability"/>
+        <Class IRI="#Vulnerability"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#TechnologyAsset"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#TechnologyAsset"/>
+        <Class IRI="#Asset"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#MarketImpact"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#MarketImpact"/>
+        <Class IRI="#Impact"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#PhysicalControl"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#PhysicalControl"/>
+        <Class  IRI="#Control"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#TerroristAttackIncident"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#TerroristAttackIncident"/>
+        <Class IRI="#Incident"/>
+    </SubClassOf>
+
+    <Declaration>
+        <Class IRI="#ReputationalRisk"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ReputationalRisk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#HealthThreat"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#HealthThreat"/>
+        <Class IRI="#Threat"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#ConfigurationVulnerability"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ConfigurationVulnerability"/>
+        <Class IRI="#Vulnerability"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#FinancialAsset"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#FinancialAsset"/>
+        <Class IRI="#Asset"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#ComplianceImpact"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ComplianceImpact"/>
+        <Class IRI="#Impact"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#LogicalControl"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#LogicalControl"/>
+        <Class IRI="#Control"/>
+    </SubClassOf>
+    <Declaration>
+        <Class IRI="#EquipmentFailureIncident"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#EquipmentFailureIncident"/>
+        <Class IRI="#Incident"/>
+    </SubClassOf>
+
+    <!-- Declaration of Properties -->
+    <Declaration>
+        <ObjectProperty IRI="#hasThreat"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVulnerability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affectsAsset"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasImpact"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMitigatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#resultsInIncident"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recordedIn"/>
+    </Declaration>
+
+    <!-- Property Domains and Ranges -->
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasThreat"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasThreat"/>
+        <Class IRI="#Threat"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVulnerability"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVulnerability"/>
+        <Class IRI="#Vulnerability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#affectsAsset"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#affectsAsset"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasImpact"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasImpact"/>
+        <Class IRI="#Impact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isMitigatedBy"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isMitigatedBy"/>
+        <Class IRI="#Control"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#resultsInIncident"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#resultsInIncident"/>
+        <Class IRI="#Incident"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#recordedIn"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recordedIn"/>
+        <Class IRI="#RiskRegister"/>
+    </ObjectPropertyRange>
+
+    <!-- Declaration of Data Properties -->
+    <Declaration>
+        <DataProperty IRI="#hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasProbability"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSeverity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCost"/>
+    </Declaration>
+
+    <!-- Example Individuals -->
+    <Declaration>
+        <NamedIndividual IRI="#Risk1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Risk"/>
+        <NamedIndividual IRI="#Risk1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasThreat"/>
+        <NamedIndividual IRI="#Risk1"/>
+        <NamedIndividual IRI="#PhysicalThreat1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVulnerability"/>
+        <NamedIndividual IRI="#Risk1"/>
+        <NamedIndividual IRI="#ApplicationVulnerability1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsAsset"/>
+        <NamedIndividual IRI="#Risk1"/>
+        <NamedIndividual IRI="#DatabaseAsset1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasImpact"/>
+        <NamedIndividual IRI="#Risk1"/>
+        <NamedIndividual IRI="#FinancialImpact1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMitigatedBy"/>
+        <NamedIndividual IRI="#Risk1"/>
+        <NamedIndividual IRI="#PreventiveControl1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDescription"/>
+        <NamedIndividual IRI="#Risk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Risk of data breach due to application vulnerability.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProbability"/>
+        <NamedIndividual IRI="#Risk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSeverity"/>
+        <NamedIndividual IRI="#Risk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCost"/>
+        <NamedIndividual IRI="#Risk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">15000</Literal>
+    </DataPropertyAssertion>
+
+    <!-- Additional Individuals -->
+    <Declaration>
+        <NamedIndividual IRI="#PhysicalThreat1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#PhysicalThreat"/>
+        <NamedIndividual IRI="#PhysicalThreat1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#ApplicationVulnerability1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#ApplicationVulnerability"/>
+        <NamedIndividual IRI="#ApplicationVulnerability1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#DatabaseAsset1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#DatabaseAsset"/>
+        <NamedIndividual IRI="#DatabaseAsset1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#FinancialImpact1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#FinancialImpact"/>
+        <NamedIndividual IRI="#FinancialImpact1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#PreventiveControl1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#PreventiveControl"/>
+        <NamedIndividual IRI="#PreventiveControl1"/>
+    </ClassAssertion>
+
+    <!-- More Example Individuals -->
+    <Declaration>
+        <NamedIndividual IRI="#OperationalRisk1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#OperationalRisk"/>
+        <NamedIndividual IRI="#OperationalRisk1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasThreat"/>
+        <NamedIndividual IRI="#OperationalRisk1"/>
+        <NamedIndividual IRI="#EnvironmentalThreat1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVulnerability"/>
+        <NamedIndividual IRI="#OperationalRisk1"/>
+        <NamedIndividual IRI="#NetworkVulnerability1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsAsset"/>
+        <NamedIndividual IRI="#OperationalRisk1"/>
+        <NamedIndividual IRI="#PersonnelAsset1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasImpact"/>
+        <NamedIndividual IRI="#OperationalRisk1"/>
+        <NamedIndividual IRI="#ReputationImpact1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMitigatedBy"/>
+        <NamedIndividual IRI="#OperationalRisk1"/>
+        <NamedIndividual IRI="#DetectiveControl1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDescription"/>
+        <NamedIndividual IRI="#OperationalRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Risk of operational disruption due to environmental threats.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProbability"/>
+        <NamedIndividual IRI="#OperationalRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSeverity"/>
+        <NamedIndividual IRI="#OperationalRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCost"/>
+        <NamedIndividual IRI="#OperationalRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10000</Literal>
+    </DataPropertyAssertion>
+
+    <Declaration>
+        <NamedIndividual IRI="#EnvironmentalThreat1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#EnvironmentalThreat"/>
+        <NamedIndividual IRI="#EnvironmentalThreat1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#NetworkVulnerability1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#NetworkVulnerability"/>
+        <NamedIndividual IRI="#NetworkVulnerability1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#PersonnelAsset1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#PersonnelAsset"/>
+        <NamedIndividual IRI="#PersonnelAsset1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#ReputationImpact1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#ReputationImpact"/>
+        <NamedIndividual IRI="#ReputationImpact1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#DetectiveControl1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#DetectiveControl"/>
+        <NamedIndividual IRI="#DetectiveControl1"/>
+    </ClassAssertion>
+
+    <!-- More Individuals and Assertions -->
+    <Declaration>
+        <NamedIndividual IRI="#ComplianceRisk1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#ComplianceRisk"/>
+        <NamedIndividual IRI="#ComplianceRisk1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasThreat"/>
+        <NamedIndividual IRI="#ComplianceRisk1"/>
+        <NamedIndividual IRI="#SocialThreat1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVulnerability"/>
+        <NamedIndividual IRI="#ComplianceRisk1"/>
+        <NamedIndividual IRI="#HardwareVulnerability1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsAsset"/>
+        <NamedIndividual IRI="#ComplianceRisk1"/>
+        <NamedIndividual IRI="#IntellectualPropertyAsset1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasImpact"/>
+        <NamedIndividual IRI="#ComplianceRisk1"/>
+        <NamedIndividual IRI="#LegalImpact1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMitigatedBy"/>
+        <NamedIndividual IRI="#ComplianceRisk1"/>
+        <NamedIndividual IRI="#CorrectiveControl1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDescription"/>
+        <NamedIndividual IRI="#ComplianceRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Risk of non-compliance with legal requirements.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProbability"/>
+        <NamedIndividual IRI="#ComplianceRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSeverity"/>
+        <NamedIndividual IRI="#ComplianceRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCost"/>
+        <NamedIndividual IRI="#ComplianceRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">20000</Literal>
+    </DataPropertyAssertion>
+
+    <Declaration>
+        <NamedIndividual IRI="#SocialThreat1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#SocialThreat"/>
+        <NamedIndividual IRI="#SocialThreat1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#HardwareVulnerability1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#HardwareVulnerability"/>
+        <NamedIndividual IRI="#HardwareVulnerability1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#IntellectualPropertyAsset1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#IntellectualPropertyAsset"/>
+        <NamedIndividual IRI="#IntellectualPropertyAsset1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#LegalImpact1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#LegalImpact"/>
+        <NamedIndividual IRI="#LegalImpact1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#CorrectiveControl1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#CorrectiveControl"/>
+        <NamedIndividual IRI="#CorrectiveControl1"/>
+    </ClassAssertion>
+
+    <Declaration>
+        <NamedIndividual IRI="#ProjectRisk1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#ProjectRisk"/>
+        <NamedIndividual IRI="#ProjectRisk1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasThreat"/>
+        <NamedIndividual IRI="#ProjectRisk1"/>
+        <NamedIndividual IRI="#EconomicThreat1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVulnerability"/>
+        <NamedIndividual IRI="#ProjectRisk1"/>
+        <NamedIndividual IRI="#SoftwareVulnerability1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsAsset"/>
+        <NamedIndividual IRI="#ProjectRisk1"/>
+        <NamedIndividual IRI="#HumanResourcesAsset1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasImpact"/>
+        <NamedIndividual IRI="#ProjectRisk1"/>
+        <NamedIndividual IRI="#OperationalImpact1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMitigatedBy"/>
+        <NamedIndividual IRI="#ProjectRisk1"/>
+        <NamedIndividual IRI="#AdministrativeControl1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDescription"/>
+        <NamedIndividual IRI="#ProjectRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Risk of project delays due to economic instability.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProbability"/>
+        <NamedIndividual IRI="#ProjectRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSeverity"/>
+        <NamedIndividual IRI="#ProjectRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCost"/>
+        <NamedIndividual IRI="#ProjectRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5000</Literal>
+    </DataPropertyAssertion>
+
+    <Declaration>
+        <NamedIndividual IRI="#EconomicThreat1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#EconomicThreat"/>
+        <NamedIndividual IRI="#EconomicThreat1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#SoftwareVulnerability1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#SoftwareVulnerability"/>
+        <NamedIndividual IRI="#SoftwareVulnerability1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#HumanResourcesAsset1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#HumanResourcesAsset"/>
+        <NamedIndividual IRI="#HumanResourcesAsset1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#OperationalImpact1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#OperationalImpact"/>
+        <NamedIndividual IRI="#OperationalImpact1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#AdministrativeControl1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#AdministrativeControl"/>
+        <NamedIndividual IRI="#AdministrativeControl1"/>
+    </ClassAssertion>
+
+    <!-- More Example Individuals -->
+    <Declaration>
+        <NamedIndividual IRI="#StrategicRisk1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#StrategicRisk"/>
+        <NamedIndividual IRI="#StrategicRisk1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasThreat"/>
+        <NamedIndividual IRI="#StrategicRisk1"/>
+        <NamedIndividual IRI="#PoliticalThreat1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVulnerability"/>
+        <NamedIndividual IRI="#StrategicRisk1"/>
+        <NamedIndividual IRI="#OrganizationalVulnerability1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsAsset"/>
+        <NamedIndividual IRI="#StrategicRisk1"/>
+        <NamedIndividual IRI="#ReputationalAsset1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasImpact"/>
+        <NamedIndividual IRI="#StrategicRisk1"/>
+        <NamedIndividual IRI="#StrategicImpact1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMitigatedBy"/>
+        <NamedIndividual IRI="#StrategicRisk1"/>
+        <NamedIndividual IRI="#PolicyControl1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDescription"/>
+        <NamedIndividual IRI="#StrategicRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Risk of strategic failure due to political instability.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProbability"/>
+        <NamedIndividual IRI="#StrategicRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSeverity"/>
+        <NamedIndividual IRI="#StrategicRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCost"/>
+        <NamedIndividual IRI="#StrategicRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">12000</Literal>
+    </DataPropertyAssertion>
+
+    <Declaration>
+        <NamedIndividual IRI="#PoliticalThreat1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#PoliticalThreat"/>
+        <NamedIndividual IRI="#PoliticalThreat1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#OrganizationalVulnerability1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#OrganizationalVulnerability"/>
+        <NamedIndividual IRI="#OrganizationalVulnerability1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#ReputationalAsset1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#ReputationalAsset"/>
+        <NamedIndividual IRI="#ReputationalAsset1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#StrategicImpact1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#StrategicImpact"/>
+        <NamedIndividual IRI="#StrategicImpact1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#PolicyControl1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#PolicyControl"/>
+        <NamedIndividual IRI="#PolicyControl1"/>
+    </ClassAssertion>
+
+    <Declaration>
+        <NamedIndividual IRI="#HumanRisk1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#HumanRisk"/>
+        <NamedIndividual IRI="#HumanRisk1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasThreat"/>
+        <NamedIndividual IRI="#HumanRisk1"/>
+        <NamedIndividual IRI="#HumanThreat1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVulnerability"/>
+        <NamedIndividual IRI="#HumanRisk1"/>
+        <NamedIndividual IRI="#HumanVulnerability1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsAsset"/>
+        <NamedIndividual IRI="#HumanRisk1"/>
+        <NamedIndividual IRI="#HumanAsset1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasImpact"/>
+        <NamedIndividual IRI="#HumanRisk1"/>
+        <NamedIndividual IRI="#SocialImpact1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMitigatedBy"/>
+        <NamedIndividual IRI="#HumanRisk1"/>
+        <NamedIndividual IRI="#BehavioralControl1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDescription"/>
+        <NamedIndividual IRI="#HumanRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Risk associated with human errors or intentional misconduct.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProbability"/>
+        <NamedIndividual IRI="#HumanRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSeverity"/>
+        <NamedIndividual IRI="#HumanRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCost"/>
+        <NamedIndividual IRI="#HumanRisk1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">8000</Literal>
+    </DataPropertyAssertion>
+
+    <Declaration>
+        <NamedIndividual IRI="#HumanThreat1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#HumanThreat"/>
+        <NamedIndividual IRI="#HumanThreat1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#HumanVulnerability1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#HumanVulnerability"/>
+        <NamedIndividual IRI="#HumanVulnerability1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#HumanAsset1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#HumanAsset"/>
+        <NamedIndividual IRI="#HumanAsset1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#SocialImpact1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#SocialImpact"/>
+        <NamedIndividual IRI="#SocialImpact1"/>
+    </ClassAssertion>
+    <Declaration>
+        <NamedIndividual IRI="#BehavioralControl1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#BehavioralControl"/>
+        <NamedIndividual IRI="#BehavioralControl1"/>
+    </ClassAssertion>
+
+</Ontology>
+
+
+
