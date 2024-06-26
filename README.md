@@ -128,6 +128,7 @@ Example individuals demonstrate the ontology's use:
 
 #### Conclusion
 This Risk Management Ontology provides a comprehensive framework to model and manage risks systematically. It aids in understanding the relationships between various risk components, ensuring a holistic approach to risk management.
-####Refrences
+#### Refrences
+
 https://www.sciencedirect.com/book/9780123859655/semantic-web-for-the-working-ontologist
 https://www.goodreads.com/book/show/394111.The_Essentials_of_Risk_Management
