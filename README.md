@@ -111,12 +111,49 @@ Data properties define attributes of individuals:
 
 #### Example Individuals
 Example individuals demonstrate the ontology's use:
-- **Risk1**: An instance of a general risk.
-    - **Threat**: Linked to a specific threat (e.g., PhysicalThreat1).
-    - **Vulnerability**: Linked to a specific vulnerability (e.g., ApplicationVulnerability1).
-    - **Asset**: Linked to a specific asset (e.g., DatabaseAsset1).
-    - **Impact**: Linked to a specific impact (e.g., FinancialImpact1).
-    - **Control**: Linked to a specific control (e.g., PreventiveControl1).
+ 
+- Individual 1: Risk2
+Class: CyberSecurityRisk
+Description: Unauthorized access to sensitive customer data through a phishing attack.
+Threat: Linked to a specific threat (e.g., CyberThreat1).
+Vulnerability: Linked to a specific vulnerability (e.g., NetworkVulnerability1).
+Asset: Linked to a specific asset (e.g., InformationAsset1).
+Impact: Linked to a specific impact (e.g., ReputationalImpact1).
+Control: Linked to a specific control (e.g., PreventiveControl2).
+Probability: High
+Severity: Critical
+Cost: Estimated at $500,000 for potential data breach recovery and fines.
+
+Individual 2: Threat1
+Class: EconomicThreat
+Description: Market volatility causing significant fluctuations in the company's stock price.
+Linked Risk: Risk related to FinancialRisk1.
+Probability: Medium
+Severity: High
+
+Individual 3: Vulnerability1
+Class: ProcessVulnerability
+Description: Inefficient manual processes in the accounts payable department leading to delayed payments and potential financial discrepancies.
+Linked Threat: HumanThreat1 (e.g., human error).
+Probability: Medium
+Severity: Medium
+
+Individual 4: Asset1
+Class: SoftwareAsset
+Description: Critical enterprise resource planning (ERP) software used for managing business operations.
+Linked Risk: OperationalRisk1 (e.g., potential failure of ERP system).
+Value: High, as it is integral to the company's daily operations.
+
+Individual 5: Incident1
+Class: DataBreachIncident
+Description: A successful cyberattack resulting in unauthorized access to customer credit card information.
+Linked Risk: CyberSecurityRisk2.
+Linked Threat: CyberThreat2 (e.g., hacking).
+Linked Vulnerability: ApplicationVulnerability2.
+Linked Asset: InformationAsset2 (customer data).
+Linked Impact: FinancialImpact2, ReputationalImpact2.
+Linked Control: CorrectiveControl1 (e.g., implementation of new encryption methods).
+Cost: Estimated at $1,000,000 for incident response, customer notification, and fines.
 
 #### Using the Ontology
 1. **Modeling Risks**: Identify risks and create instances in the ontology.
