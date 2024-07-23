@@ -7,90 +7,90 @@ This Risk Management Ontology is designed to model the various elements involved
 The ontology consists of 60 classes and subclasses, organized hierarchically into key areas relevant to risk management:
 
 1. **Risk**: Represents potential events that could negatively impact an organization.
-    - **CyberSecurityRisk**
-    - **OperationalRisk**
-    - **StrategicRisk**
-    - **ComplianceRisk**
-    - **FinancialRisk**
-    - **ReputationalRisk**
-    - **MarketRisk**
-    - **EnvironmentalRisk**
-    - **HumanRisk**
-    - **ProjectRisk**
+    - **CyberSecurityRisk**(Risk of unauthorized access or attacks on an organization's information systems.)
+    - **OperationalRisk**(Risk arising from failed internal processes, people, or systems within the organization.)
+    - **StrategicRisk**(Risk related to high-level decisions affecting the organization's direction and goals.)
+    - **ComplianceRisk**(Risk of legal or regulatory sanctions due to non-compliance with laws and regulations.)
+    - **FinancialRisk**(Risk of financial loss due to market fluctuations, credit issues, or investment failures.)
+    - **ReputationalRisk**(Risk of damage to an organization's reputation affecting stakeholder trust.)
+    - **MarketRisk**(Risk of losses due to changes in market conditions, such as price movements or demand shifts.)
+    - **EnvironmentalRisk**(Risk arising from environmental factors, including natural disasters and climate change.)
+    - **HumanRisk**(Risk associated with human factors, such as employee errors or unethical behavior.)
+    - **ProjectRisk**(Risk of project failure due to issues in planning, execution, or resource allocation.)
 
 2. **Threat**: Represents sources of potential harm.
-    - **PhysicalThreat**
-    - **CyberThreat**
-    - **EnvironmentalThreat**
-    - **PoliticalThreat**
-    - **EconomicThreat**
-    - **HumanThreat**
-    - **TechnicalThreat**
-    - **OperationalThreat**
-    - **StrategicThreat**
-    - **ComplianceThreat**
+    - **PhysicalThreat**(Threats involving physical harm or damage to assets, such as theft or vandalism.)
+    - **CyberThreat**(Threats related to malicious cyber activities like hacking, malware, or phishing.)
+    - **EnvironmentalThreat**(Threats stemming from environmental events, including natural disasters like earthquakes and floods.)
+    - **PoliticalThreat**(Threats arising from political instability, changes in government policies, or geopolitical tensions.)
+    - **EconomicThreat**(Threats due to economic conditions, such as recessions, inflation, or market volatility.)
+    - **HumanThreat**(Threats related to human actions, including negligence, errors, or malicious intent.)
+    - **TechnicalThreat**(Threats resulting from technical failures or vulnerabilities in systems and infrastructure.)
+    - **OperationalThreat**(Threats associated with disruptions in daily operational activities or processes.)
+    - **StrategicThreat**( Threats that impact an organization's long-term objectives and strategic goals.)
+    - **ComplianceThreat**( Threats of non-compliance with laws, regulations, or industry standards.)
 
 3. **Vulnerability**: Represents weaknesses that can be exploited by threats.
-    - **ApplicationVulnerability**
-    - **NetworkVulnerability**
-    - **OrganizationalVulnerability**
-    - **InfrastructureVulnerability**
-    - **PersonnelVulnerability**
-    - **ProcessVulnerability**
-    - **SupplyChainVulnerability**
-    - **FinancialVulnerability**
-    - **ComplianceVulnerability**
-    - **TechnicalVulnerability**
+    - **ApplicationVulnerability**(Weaknesses in software applications that can be exploited by threats.)
+    - **NetworkVulnerability**(Weaknesses in network infrastructure that can be exploited by cyber threats.)
+    - **OrganizationalVulnerability**( Weaknesses in organizational structure or policies that can be exploited by threats.)
+    - **InfrastructureVulnerability**(Weaknesses in physical or technical infrastructure that can be exploited by threats.)
+    - **PersonnelVulnerability**(Weaknesses related to employee behavior, training, or actions that can be exploited by threats.)
+    - **ProcessVulnerability**(Weaknesses in business processes that can be exploited by threats.)
+    - **SupplyChainVulnerability**(Weaknesses in the supply chain that can be exploited by threats.)
+    - **FinancialVulnerability**(Weaknesses in financial systems or practices that can be exploited by threats.)
+    - **ComplianceVulnerability**(Weaknesses in compliance with laws and regulations that can be exploited by threats.)
+    - **TechnicalVulnerability**(Weaknesses in technology or technical systems that can be exploited by threats.)
 
 4. **Asset**: Represents valuable items within an organization.
-    - **DatabaseAsset**
-    - **HardwareAsset**
-    - **SoftwareAsset**
-    - **InformationAsset**
-    - **HumanAsset**
-    - **PhysicalAsset**
-    - **IntellectualPropertyAsset**
-    - **FinancialAsset**
-    - **ReputationalAsset**
-    - **OperationalAsset**
+    - **DatabaseAsset**(Valuable databases containing critical organizational data.)
+    - **HardwareAsset**(Physical hardware used within the organization, such as servers and computers.)
+    - **SoftwareAsset**(Software applications and systems used by the organization.)
+    - **InformationAsset**(Information and data that are valuable to the organization.)
+    - **HumanAsset**(Employees and their skills, knowledge, and experience.)
+    - **PhysicalAsset**(Tangible assets such as buildings, equipment, and inventory.)
+    - **IntellectualPropertyAsset**( Intellectual property such as patents, trademarks, and copyrights.)
+    - **FinancialAsset**(Financial resources, including cash, investments, and accounts receivable.)
+    - **ReputationalAsset**(The organization's reputation and brand value.)
+    - **OperationalAsset**(Assets related to the operation of the organization, such as production equipment and facilities.)
 
 5. **Impact**: Represents the consequences of a risk materializing.
-    - **FinancialImpact**
-    - **OperationalImpact**
-    - **StrategicImpact**
-    - **ReputationalImpact**
-    - **ComplianceImpact**
-    - **EnvironmentalImpact**
-    - **HumanImpact**
-    - **MarketImpact**
-    - **ProjectImpact**
-    - **CustomerImpact**
+    - **FinancialImpact**(The effect of a risk on the organization's financial position.)
+    - **OperationalImpact**(The impact of a risk on the organization's operations and processes.)
+    - **StrategicImpact**(The influence of a risk on the organization's strategic objectives and long-term goals.)
+    - **ReputationalImpact**(The effect of a risk on the organization's reputation and stakeholder trust.)
+    - **ComplianceImpact**(The impact of a risk on the organization's ability to comply with laws and regulations.)
+    - **EnvironmentalImpact**(The consequences of a risk on the natural environment.)
+    - **HumanImpact**(The effect of a risk on human health and safety.)
+    - **MarketImpact**(The impact of a risk on the market position and competitiveness of the organization.)
+    - **ProjectImpact**(The influence of a risk on the successful completion of projects.)
+    - **CustomerImpact**(The effect of a risk on customer satisfaction and relationships.)
 
 6. **Control**: Represents measures to mitigate risks.
-    - **PreventiveControl**
-    - **DetectiveControl**
-    - **CorrectiveControl**
-    - **DirectiveControl**
-    - **CompensatoryControl**
-    - **PhysicalControl**
-    - **TechnicalControl**
-    - **AdministrativeControl**
-    - **LegalControl**
-    - **EnvironmentalControl**
+    - **PreventiveControl**(Measures taken to prevent risks from occurring.)
+    - **DetectiveControl**(Measures designed to detect the occurrence of risks.)
+    - **CorrectiveControl**(Actions taken to correct or mitigate the effects of a risk after it has occurred.)
+    - **DirectiveControl**(Controls that provide guidelines or instructions to manage risks.)
+    - **CompensatoryControl**( Alternative controls that can be used to mitigate risks when primary controls are not effective.)
+    - **PhysicalControl**(Tangible measures to protect assets and prevent risks.)
+    - **TechnicalControl**(Technology-based measures to mitigate risks.)
+    - **AdministrativeControl**(Policies, procedures, and processes designed to manage risks.)
+    - **LegalControl**(Legal measures and compliance requirements to mitigate risks.)
+    - **EnvironmentalControl**(Measures to protect the environment and mitigate environmental risks.)
 
 7. **Incident**: Represents events that have impacted or may impact the organization.
-    - **DataBreachIncident**
-    - **SystemFailureIncident**
-    - **FraudIncident**
-    - **NaturalDisasterIncident**
-    - **RegulatoryIncident**
-    - **OperationalIncident**
-    - **StrategicIncident**
-    - **ComplianceIncident**
-    - **FinancialIncident**
-    - **ReputationalIncident**
+    - **DataBreachIncident**(An event where unauthorized access to sensitive data occurs.)
+    - **SystemFailureIncident**(An event involving the failure of critical IT systems or infrastructure.)
+    - **FraudIncident**(An event where fraudulent activities, such as embezzlement or deception, are detected.)
+    - **NaturalDisasterIncident**(An event caused by natural disasters like earthquakes, floods, or hurricanes.)
+    - **RegulatoryIncident**(An event involving breaches of regulatory requirements or legal standards.)
+    - **OperationalIncident**(An event disrupting normal business operations and processes.)
+    - **StrategicIncident**(An event affecting the organization's strategic direction and long-term goals.)
+    - **ComplianceIncident**(An event where non-compliance with laws, regulations, or policies is identified.)
+    - **FinancialIncident**(An event causing significant financial loss or impact.)
+    - **ReputationalIncident**(An event damaging the organization's reputation and stakeholder trust.)
 
-8. **RiskRegister**: Represents a log of identified risks.
+8. **RiskRegister**: A comprehensive record of all identified risks, including details about their nature, status, and mitigation measures.
 
 #### Object Properties
 Object properties define relationships between classes:
